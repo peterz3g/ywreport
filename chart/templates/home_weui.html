@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>报表测试</title>
+    <!-- 引入 WeUI -->
+    <link rel="stylesheet" href="/static/css/weui.min.css"/>
+    <link rel="stylesheet" href="/static/css/home_weui.css"/>
+    <!--引入 echart-->
+    <script src="/static/js/echarts.min.js"></script>
+    <!--<script src="/static/js/vconsole.min.js"></script>-->
+
+
+</head>
+
+<body ontouchstart>
+<!--容器的主框架-->
+
+<!--在容器主框架下展示的下导航主页-->
+    <div class="weui_tab">
+        <div class="weui_tab_bd" id="tab_body">
+            <!--导航body中嵌入可变容器,js控制显示-->
+            <div class="container" id="container_tabbody"></div>
+
+        </div>
+        <div class="weui_tabbar">
+            <a href="#/itoms_lev1" class="weui_tabbar_item weui_bar_item_on" id="itoms">
+                <div class="weui_tabbar_icon">
+                    <img src="/static/images/icon_nav_button.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">工单统计</p>
+            </a>
+            <a href="#/tabbar_body" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="/static/images/icon_nav_msg.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">系统监控</p>
+            </a>
+            <a href="#/itoms_lev1" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="/static/images/icon_nav_article.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">优化建议</p>
+            </a>
+            <a href="#/itoms_lev1" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="/static/images/icon_nav_cell.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">业务分析</p>
+            </a>
+        </div>
+    </div>
+
+<script type="text/html" id="tabbar_body">
+    <div class="hd">
+        <h1 class="page_title">Cell</h1>
+    </div>
+    <div class="bd">
+        <div class="weui_cells_title">带说明的列表项</div>
+        <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>标题文字</p>
+                </div>
+                <div class="weui_cell_ft">说明文字</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="itoms_lev1">
+    <div class="hd">
+        <h1 class="page_title">工单数量统计</h1>
+    </div>
+    <div class="bd">
+        <div class="weui_cells_title">Xbank问题工单数量统计</div>
+        <div class="weui_cells">
+            <div class="weui_cell" id="main">
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    myChart.on('click', function (params) {
+    window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.name));
+    });
+</script>
+
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/router.min.js"></script>
+<script src="/static/js/home_weui.js"></script>
+
+</body>
+</html>

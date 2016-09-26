@@ -1,0 +1,13 @@
+test-out
+http://111.205.207.129/webservice/verifySessionRtnUserNumService?wsdl
+http://msmoatest.cmbc.com.cn/webservice/verifySessionRtnUserNumService?wsdl
+
+test-in
+http://197.3.196.107:8899/webservice/verifySessionRtnUserNumService?wsdl
+
+
+
+prd-in
+http://40.49.64.170:8899/webservice/verifySessionRtnUserNumService?wsdl
+http://40.49.64.171:8899/webservice/verifySessionRtnUserNumService?wsdl
+

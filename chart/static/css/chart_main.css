@@ -1,0 +1,16 @@
+.chart_cells {
+    margin: 0px;
+    width: auto;
+    height: 400px;
+    overflow: scroll;
+    /*background-color:red;*/
+}
+
+.chart_cell {
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    /*background-color:green;*/
+}
+
+

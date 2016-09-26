@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>报表测试页面</title>
+
+    <link rel="stylesheet" href="/static/css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="/static/css/weui.min.css"/>
+    <link rel="stylesheet" href="/static/css/chart_main.css"/>
+    <!--<script src="/static/js/vconsole.min.js"></script>-->
+</head>
+
+<body>
+
+<div data-role="page">
+    <div data-role="header">
+{#        <h1>报表测试页面</h1>#}
+    </div>
+    <div data-role="content" style="padding:0px;">
+{#        <p id="testp">用户:{{  request.user  }}-路径:</p>#}
+{#        <p id="testp">用户:{{  request.user  }}</p>#}
+        <div id="page_content_load" >
+            <!--$("#div1").load("/demo/ajax/demo_test.txt #p1");-->
+            <!--<div id="itoms_xbank" style="width:  auto;height:400px;"></div>-->
+        </div>
+{#        <p id="testp">2-当前路径:</p>#}
+    </div>
+
+    <!--<div data-role="footer" data-position="fixed" data-fullscreen="true">-->
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+        <div id="page_footer_load">
+            <!--$("#div1").load("/demo/ajax/demo_test.txt #p1");-->
+            <div class="weui_tabbar">
+                <!--itoms use one page method-->
+                <a href="#" class="weui_tabbar_item weui_bar_item_on" id="tabbar_itoms"
+                   data-ajax="true">
+                    <div class="weui_tabbar_icon">
+                        <img src="/static/images/icon_nav_button.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">工单统计</p>
+                </a>
+                <!--patrol use another page method-->
+                <a class="weui_tabbar_item" id="tabbar_patrol" data-ajax="true">
+                    <div class="weui_tabbar_icon">
+                        <img src="/static/images/icon_nav_msg.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">系统监控</p>
+                </a>
+                <a href="#" class="weui_tabbar_item" id="tabbar_suggest">
+                    <div class="weui_tabbar_icon">
+                        <img src="/static/images/icon_nav_article.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">优化建议</p>
+                </a>
+                <a href="#" class="weui_tabbar_item" id="tabbar_busi">
+                    <div class="weui_tabbar_icon">
+                        <img src="/static/images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">业务分析</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.mobile-1.4.5.min.js"></script>
+<!--<script src="/static/js/zepto.min.js"></script>-->
+<script src="/static/js/echarts.min.js"></script>
+
+<script src="/static/js/chinaMap/china.js"></script>
+{#find ./static/js/chinaMap/|sort  | awk -F'.' '{print "<script src=\""$2"."$3"\"></script>"}'#}
+<script src="/static/js/chinaMap/anhui.js"></script>
+<script src="/static/js/chinaMap/aomen.js"></script>
+<script src="/static/js/chinaMap/beijing.js"></script>
+<script src="/static/js/chinaMap/chongqing.js"></script>
+<script src="/static/js/chinaMap/fujian.js"></script>
+<script src="/static/js/chinaMap/gansu.js"></script>
+<script src="/static/js/chinaMap/guangdong.js"></script>
+<script src="/static/js/chinaMap/guangxi.js"></script>
+<script src="/static/js/chinaMap/guizhou.js"></script>
+<script src="/static/js/chinaMap/hainan.js"></script>
+<script src="/static/js/chinaMap/hebei.js"></script>
+<script src="/static/js/chinaMap/heilongjiang.js"></script>
+<script src="/static/js/chinaMap/henan.js"></script>
+<script src="/static/js/chinaMap/hubei.js"></script>
+<script src="/static/js/chinaMap/hunan.js"></script>
+<script src="/static/js/chinaMap/jiangsu.js"></script>
+<script src="/static/js/chinaMap/jiangxi.js"></script>
+<script src="/static/js/chinaMap/jilin.js"></script>
+<script src="/static/js/chinaMap/liaoning.js"></script>
+<script src="/static/js/chinaMap/neimenggu.js"></script>
+<script src="/static/js/chinaMap/ningxia.js"></script>
+<script src="/static/js/chinaMap/qinghai.js"></script>
+<script src="/static/js/chinaMap/shandong.js"></script>
+<script src="/static/js/chinaMap/shanghai.js"></script>
+<script src="/static/js/chinaMap/shanxi1.js"></script>
+<script src="/static/js/chinaMap/shanxi.js"></script>
+<script src="/static/js/chinaMap/sichuan.js"></script>
+<script src="/static/js/chinaMap/tianjin.js"></script>
+<script src="/static/js/chinaMap/xianggang.js"></script>
+<script src="/static/js/chinaMap/xinjiang.js"></script>
+<script src="/static/js/chinaMap/xizang.js"></script>
+<script src="/static/js/chinaMap/yunnan.js"></script>
+<script src="/static/js/chinaMap/zhejiang.js"></script>
+
+
+{#the chart theme#}
+<script src="/static/js/macarons.js"></script>
+{#<script src="/static/js/dark.js"></script>#}
+{#<script src="/static/js/purple-passion.js"></script>#}
+<!--<script src="/static/js/router.min.js"></script>-->
+<!--the script logic is the same-->
+<script src="/static/js/chart_main.js"></script>
+</body>
+</html>
