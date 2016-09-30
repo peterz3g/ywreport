@@ -73,9 +73,10 @@ WSGI_APPLICATION = 'ywreport.wsgi.application'
 
 # Database
 # PRO_MODEL = "sae"
-PRO_MODEL = "local_sqlite3"
+# PRO_MODEL = "local_sqlite3"
 # PRO_MODEL = "local_mysql"
 # PRO_MODEL = "sae_old_mysql"
+PRO_MODEL = "dao_mysql"
 
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 if PRO_MODEL == "sae":
@@ -116,6 +117,18 @@ elif PRO_MODEL == 'local_sqlite3':
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+elif PRO_MODEL == 'dao_mysql':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'sr0BNEXuIAtQhmMV',
+            'USER': 'uFZdPMiIBbnO2cCW',
+            'PASSWORD': 'pHahMksnmIrpwlY1N',
+            'HOST': '10.10.26.58',
+            'PORT': '3306',
+        }
+    }
+
 elif PRO_MODEL == 'local_mysql':
     DATABASES = {
         'default': {
