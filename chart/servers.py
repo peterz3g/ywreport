@@ -11,6 +11,7 @@ from django.http import JsonResponse
 # Create your servers here.
 from chart.mkChartData.GeoChart import GeoChart
 from chart.mkChartData.LineChart import LineChart
+from chart.mkChartData.PieChart import PieChart
 from chart.mkChartData.VerBarChart import VerBarChart
 from chart.mkChartData.HorBarChart import HorBarChart
 from django.core.serializers import json
@@ -30,6 +31,7 @@ def server_itoms(request):
         'ver_bar': ver_bar_chart_server,
         'hor_bar': hor_bar_chart_server,
         'geo': geo_chart_server,
+        'pie': pie_chart_server,
         # 'pie': pie_chart_server,
     }
     # return func_route[request.GET['chart_type']](request.GET['itoms_type'])
@@ -54,7 +56,13 @@ def ver_bar_chart_server(request):
 def hor_bar_chart_server(request):
     itoms_type = request.GET['itoms_type']
     chart = HorBarChart()
-    result = chart.mk_sysitoms_gby_date(itoms_type)
+    # if itoms_type==u"变更工单" or itoms_type==u""
+    # print type(itoms_type)
+    if u"变更" in itoms_type:
+        result = chart.mk_itoms_chg_gby_date(itoms_type)
+        # print "1111111111111"
+    else:
+        result = chart.mk_sysitoms_gby_date(itoms_type)
     return JsonResponse(result)
 
 
@@ -63,7 +71,20 @@ def geo_chart_server(request):
     itoms_type = request.GET['itoms_type']
     itoms_date = request.GET['itoms_date']
     chart = GeoChart()
-    result = chart.mk_Areaitoms_gby_type_date(itoms_type,itoms_date)
+    result = chart.mk_Areaitoms_gby_type_date(itoms_type, itoms_date)
+    # f = open('/static/json/china.json')
+    # result = json.load(f)
+    return JsonResponse(result)
+    # return HttpResponse('hello')
+    # return JsonResponse('/static/json/china.json')
+
+
+def pie_chart_server(request):
+    # print "geo_chart_server...."
+    itoms_type = request.GET['itoms_type']
+    itoms_date = request.GET['itoms_date']
+    chart = PieChart()
+    result = chart.mk_itoms_chg_by_date_gby_reason(itoms_type, itoms_date)
     # f = open('/static/json/china.json')
     # result = json.load(f)
     return JsonResponse(result)

@@ -86,6 +86,7 @@ $(function () {
     // var chart_chg = echarts.init(document.getElementById('itoms_chg'));
     // chart_chg.showLoading();
     // load_line_chart('itoms_chg', com_option, "line", "chg");
+    load_hor_bar_chart('itoms_chg_emgc', com_option, "hor_bar", "紧急变更");
     load_hor_bar_chart('itoms_chg', com_option, "hor_bar", "变更工单");
     load_hor_bar_chart('itoms_xbank', com_option, "hor_bar", "Xbank事件工单");
 
@@ -187,7 +188,7 @@ function load_hor_bar_chart(chart_div, com_option, chart_type, itoms_type) {
             chart_ins.setOption({
                 series: [{
                     type: 'bar',
-                    
+
                 }]
             });
             chart_ins.setOption({
@@ -222,10 +223,15 @@ function load_hor_bar_chart(chart_div, com_option, chart_type, itoms_type) {
                 // console.log(params.value);
 
                 // chart_chg.showLoading();
+                //下钻选定两个值：
+                // params.seriesName=工单类型,是legend维；
+                // params.name=日期，是横坐标维;
                 if (chart_div == 'itoms_chg')
                     load_ver_bar_chart(chart_div, com_option, "ver_bar", params.seriesName, params.name);
                 else if (chart_div == 'itoms_xbank')
                     load_geo_chart(chart_div, com_option, "geo", params.seriesName, params.name);
+                else if (chart_div == 'itoms_chg_emgc')
+                    load_pie_chart(chart_div,com_option, params.seriesName, params.name);
                 // load_geo_chart(chart_div, com_option, "geo", "Xbank事件工单", '20160701');
 
 
@@ -710,11 +716,11 @@ function load_pie_chart_local(chart_div, com_option, chart_type, itoms_type, ito
                 // console.log("------111111112-------------");
                 // console.log(params);
                 if (params.value.length > 1)
-                    return params.seriesName + "<br />" + params.name + ":" + params.value[2] + " " + params.percent +"%"
+                    return params.seriesName + "<br />" + params.name + ":" + params.value[2] + " " + params.percent + "%"
                 else {
                     // return '<a href="/test1.html">link</a>'
                     //     +params.seriesName + "<br />" + params.name + ":" + params.value
-                    return params.seriesName + "<br />" + params.name + ":" + params.value + " " + params.percent +"%"
+                    return params.seriesName + "<br />" + params.name + ":" + params.value + " " + params.percent + "%"
                 }
             },
         },
@@ -792,6 +798,112 @@ function load_pie_chart_local(chart_div, com_option, chart_type, itoms_type, ito
     chart_ins.setOption(pie_option, true);
     chart_ins.hideLoading();
 }
+
+//20161009,zhangyang32 加载饼图数据，从服务端取数.
+//chart_type="pie"
+//itoms_type="chg_emgc_by_reasion"
+function load_pie_chart(chart_div,com_option ,itoms_type, itoms_date) {
+    var chart_dom = document.getElementById(chart_div);
+    var chart_ins = echarts.init(chart_dom, 'macarons');
+    chart_ins.showLoading();
+
+    //设置容器ＤＯＭ的高度,这里直接设置正常容器为４００
+    var my_height = CHART_HEIGHT;
+    chart_dom.style.height = my_height.toString() + "px";
+    chart_ins.resize();
+
+    // 填入数据
+    result = null
+    $.getJSON("/server_itoms",
+        {chart_type: "pie", itoms_type: itoms_type, itoms_date: itoms_date},
+        function (result) {
+            console.log('==in=============');
+            console.log(result);
+
+            pie_option = {
+                // backgroundColor: '#d9ead3',
+                legend: {
+                    data: result.legend_data,
+                    left: 'center',
+                    top: 'bottom',
+                },
+                tooltip: {
+                    trigger: 'itom',
+                    triggerOn: 'click',
+                    hideDelay: '100',
+                    enterable: true,
+                    formatter: function (params) {
+                        // console.log("------111111112-------------");
+                        // console.log(params);
+                        if (params.value.length > 1)
+                            return params.seriesName + "<br />" + params.name + ":" + params.value[2] + "(" + params.percent + "%)"
+                        else {
+                            // return '<a href="/test1.html">link</a>'
+                            //     +params.seriesName + "<br />" + params.name + ":" + params.value
+                            return params.seriesName + "<br />" + params.name + ":" + params.value + "(" + params.percent + "%)"
+                        }
+                    },
+                },
+                toolbox: {
+                    show: true,
+                    itemSize: 20,
+                    feature: {
+                        // restore: {show: false},
+                        myReturn: {
+                            show: true,
+                            title: '返回',
+                            //path是SVG图，我是从网上ｄｏｗｎ的
+                            icon: 'path://M186.988,252.656H490v-15.312H186.988L265.53,47.056L0,245l265.53,197.944L186.988,252.656z M230.212,92.482L167.261,245  l62.951,152.517L25.629,245L230.212,92.482z',
+                            onclick: function (a, b, c, d) {
+                                //一共可以看到有４个参数
+                                //a-可以得到当前option: a.option.title[0]['text'])
+                                //b-可以得到当前Dom: ins=echarts.getInstanceByDom(b.getDom())
+                                //c-可以得到当前自定义工具名字，即myReturn
+                                //d-可以得到当前事件类型
+                                // console.log("--------tool box func------");
+                                var dom = b.getDom(); //对象可以打印出来，在控制台看变量的内部结构与值
+                                // load_line_chart(dom.id, com_option, "line", "chg");
+                                toolbox_return_btn(dom.id, com_option);
+                            }
+                        },
+                        magicType: {
+                            show: false, type: ['stack', 'tiled', 'line', 'bar']
+                        },
+                    }
+                },
+                title: {
+                    // text: result.title_text,
+                    text: result.title_text,
+                    subtext: itoms_date + " 长按切换子系统状态",
+                    // subtext: itoms_date + " 长按切换省级地图",
+                },
+                series: result.series
+            };
+
+            //增加超时设置,是为了在手机端click时,屏蔽掉鼠标按下操作
+            var intervalTimer = null;
+            chart_ins.on('click', function (param) {
+                clearTimeout(intervalTimer); //取消上次延时未执行的方法
+            });
+
+            // chart_ins.on('mousedown', function (param) {
+            chart_ins.on('dblclick', function (param) {
+                // console.log(param);
+                clearTimeout(intervalTimer); //取消上次延时未执行的方法
+                // intervalTimer = setTimeout(function () {
+                //     click 事件的处理
+                    // console.log(param);
+                    // load_ver_bar_chart(chart_div, com_option, chart_type, itoms_type, itoms_date);
+                // }, 1000);
+                load_hor_bar_chart('itoms_chg_emgc', com_option, "hor_bar", "紧急变更");
+            });
+
+            chart_ins.setOption(pie_option, true);
+            chart_ins.hideLoading();
+        }
+    )
+}
+
 //echart 工具箱,自定义返回函数
 function toolbox_return_btn(chart_div, com_option) {
     // console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
@@ -800,6 +912,8 @@ function toolbox_return_btn(chart_div, com_option) {
         load_hor_bar_chart('itoms_chg', com_option, "hor_bar", "变更工单");
     else if (chart_div == 'itoms_xbank')
         load_hor_bar_chart('itoms_xbank', com_option, "hor_bar", "Xbank事件工单");
+    else if (chart_div == 'itoms_chg_emgc')
+        load_hor_bar_chart('itoms_chg_emgc', com_option, "hor_bar", "紧急变更");
 }
 
 

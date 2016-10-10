@@ -20,6 +20,8 @@ if django.VERSION >= (1, 7):  # 自动判断版本
     django.setup()
 
 from chart.models import itoms_count
+from chart.models import itoms_chg
+from chart.models import itoms_para_mod
 from django.db import connection
 from django.http import HttpResponse
 
@@ -29,6 +31,8 @@ def impMysqlData(request):
     itoms_count.objects.all().delete()
     impItomsHaveSys()
     impItomsHaveArea()
+    reload_itoms_chg()
+    reload_itoms_para_mod()
     return HttpResponse("ok, finished.....")
 
 
@@ -45,13 +49,13 @@ def impItomsHaveSys():
     # cursor.execute("TRUNCATE TABLE `chart_itoms_count`")
 
 
-    myfile = open('%s/file/itoms_chg20160715.csv' % BASE_DIR)
-    rowhead = myfile.readline()
-    print rowhead
+    myfile = open('%s/file/itom_chg20161002.csv' % BASE_DIR)
+    # rowhead = myfile.readline()
+    # print rowhead
     for line in myfile:
         crt_date, itoms_type, sys_name, itoms_status, count = line.split('|+|')
         itoms_count.objects.create(
-            crt_date=crt_date.replace('-', ''),  #保证日期为8位
+            crt_date=crt_date.replace('-', ''),  # 保证日期为8位
             itoms_type=itoms_type,
             sys_name=sys_name,
             itoms_status=itoms_status,
@@ -68,19 +72,69 @@ def impItomsHaveArea():
     # cursor.execute("TRUNCATE TABLE `chart_itoms_count`")
 
 
-    myfile = open('%s/file/itoms_xbank20160715.csv' % BASE_DIR)
-    rowhead = myfile.readline()
-    print rowhead
+    myfile = open('%s/file/itom_xbankevent20161002.csv' % BASE_DIR)
+    # rowhead = myfile.readline()
+    # print rowhead
     for line in myfile:
         crt_date, itoms_type, brch_no, brch_name, sys_name, itoms_status, count = line.split('|+|')
         city_name = getBrchByNo(brch_no)
         itoms_count.objects.create(
-            crt_date=crt_date.replace('-', ''),  #保证日期为8位
+            crt_date=crt_date.replace('-', ''),  # 保证日期为8位
             itoms_type=itoms_type,
             sys_name=sys_name,
             itoms_status=itoms_status,
             count=int(count),
             area_name=city_name
+        )
+    myfile.close()
+
+
+def reload_itoms_chg():
+    # itoms_count.objects.all().delete()
+    # use below for the autoincrement not reset, but consider usefull at anywhere
+    # cursor = connection.cursor()
+    # cursor.execute("TRUNCATE TABLE `chart_itoms_count`")
+
+
+    myfile = open('%s/file/itom_chg_new20161002.csv' % BASE_DIR)
+    # rowhead = myfile.readline()
+    # print rowhead
+    itoms_chg.objects.all().delete()
+    for line in myfile:
+        crt_date, itoms_type, sys_name, itoms_status, emergency_reason, count = line.split('|+|')
+        itoms_chg.objects.create(
+            crt_date=crt_date.replace('-', ''),  # 保证日期为8位
+            itoms_type=itoms_type,
+            sys_name=sys_name,
+            itoms_status=itoms_status,
+            emergency_reason=emergency_reason,
+            count=int(count)
+        )
+    myfile.close()
+
+
+def reload_itoms_para_mod():
+    # itoms_count.objects.all().delete()
+    # use below for the autoincrement not reset, but consider usefull at anywhere
+    # cursor = connection.cursor()
+    # cursor.execute("TRUNCATE TABLE `chart_itoms_count`")
+
+
+    myfile = open('%s/file/itom_para_mod20161002.csv' % BASE_DIR)
+    # rowhead = myfile.readline()
+    # print rowhead
+
+    itoms_para_mod.objects.all().delete()
+    for line in myfile:
+        crt_date, itoms_type, sys_name, mod_type, itoms_status, mod_reason, count = line.split('|+|')
+        itoms_para_mod.objects.create(
+            crt_date=crt_date.replace('-', ''),  # 保证日期为8位
+            itoms_type=itoms_type,
+            sys_name=sys_name,
+            mod_type=mod_type,
+            itoms_status=itoms_status,
+            mod_reason=mod_reason,
+            count=int(count)
         )
     myfile.close()
 

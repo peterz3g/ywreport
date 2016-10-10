@@ -73,10 +73,10 @@ WSGI_APPLICATION = 'ywreport.wsgi.application'
 
 # Database
 # PRO_MODEL = "sae"
-# PRO_MODEL = "local_sqlite3"
+PRO_MODEL = "local_sqlite3"
 # PRO_MODEL = "local_mysql"
 # PRO_MODEL = "sae_old_mysql"
-PRO_MODEL = "dao_mysql"
+# PRO_MODEL = "dao_mysql"
 
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 if PRO_MODEL == "sae":

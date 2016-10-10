@@ -1,6 +1,6 @@
 # coding:utf-8
 '''
-折线图类，生成折线展现时需要的数据
+饼图类，生成饼图展现时需要的数据
 '''
 
 import datetime
@@ -27,11 +27,13 @@ if django.VERSION >= (1, 7):  # 自动判断版本
     django.setup()
 
 from chart.models import itoms_count
+from chart.models import itoms_chg
+from chart.models import itoms_para_mod
 
 
-class VerBarChart:
+class PieChart:
     """
-    echart 垂直分布的柱状图, 数据集合与数据生成
+    echart 饼图, 数据集合与数据生成
     类变量命名规范：从echart配置项开始，逐级append参数名称，并用下划线相连．
     如：series_data; series_data_label_normal_show 等．
     """
@@ -47,7 +49,8 @@ class VerBarChart:
         self.today_n_ago = (datetime.datetime.now() - datetime.timedelta(days=self.PERIOD_DAYS)).strftime("%Y%m%d")
         self.selected_date = ''
 
-    def mk_itoms_by_date(self, itoms_type, date):
+    # 20161009-zhangyang32 create
+    def mk_itoms_chg_by_date_gby_reason(self, itoms_type, date):
         '''
         由于查询涉及到具体的工单字段，因此图类的方法需要按名称区分不同数据源的处理,而不是统一函数名称
         查询生成某类工单，某天的统计数据
@@ -57,65 +60,58 @@ class VerBarChart:
         '''
 
         self.selected_date = date  # 当前选中日期,格式同源数据库，字符串保存
-        # self.title_text = '%s按系统排名' % itoms_type
-        self.title_text = u'%s按系统排名' % itoms_type
+        self.title_text = u'%s按原因统计' % itoms_type
 
         # 查询当前要处理的数据集合，不做加工
-        query_set = itoms_count.objects \
-            .filter(crt_date=self.selected_date, itoms_type=itoms_type) \
-            .exclude(sys_name='(null)')
+        # query_set = itoms_chg.objects \
+        #     .filter(crt_date=self.selected_date, itoms_type=itoms_type) \
+        #     .exclude(sys_name='(null)')
+        query_set = itoms_chg.objects \
+            .filter(crt_date=self.selected_date, itoms_type=itoms_type)
 
-        # 根据当前数据集，找到所有工单状态,作为legend分类数据
-        query_itoms_status = query_set.values('itoms_status').distinct().order_by('itoms_status')
+        # 根据当前数据集，找到所有工单修改原因,作为legend分类数据
+        query_itoms_legend = query_set.values('emergency_reason').distinct().order_by('emergency_reason')
 
-        # 根据当前数据集，生成对工单的统计数据
-        query_count_by_sys_stat = query_set.values('sys_name', 'itoms_status') \
-            .annotate(count_grp=Sum('count')).order_by('sys_name', 'itoms_status')
+        # 根据当前数据集，生成group by统计数据
+        query_count_by_legend = query_set.values('emergency_reason') \
+            .annotate(count_grp=Sum('count')).order_by('emergency_reason')
 
-
-        # 根据当前数据集，生成对工单的统计数据; 单独按系统排名是为了得到从高到低的顺序
-        query_count_total = query_set.values('sys_name') \
+        # 根据当前数据集，生成对工单的统计数据; 单独按系统排名是为了得到对统计数据的排序
+        query_count_total = query_set.values('emergency_reason') \
             .annotate(count_grp=Sum('count')).order_by('count_grp')
 
-
         # 根据系统总量排名，遍历数据集，生成展示数据．
-        for q in query_count_total:
-            self.yAxis_data.append(q['sys_name'])
 
         # 数据集确定后，状态维度的长度固定，系统类型维度的长度固定．即每一个系统都要有这几个状态，没有时补０．
         # 可以先按维度初始化，然后遍历系统，有则＋１计数．
         sys_count = query_count_total.count()
-        self.yAxis_count=sys_count
 
-        for q in query_itoms_status:
-            self.legend_data.append(q['itoms_status'])
+        for q in query_itoms_legend:
+            self.legend_data.append(q['emergency_reason'])
 
-            # 每个状态维度都初始化固定系统长度值
-            sys_list = [0] * sys_count
-            for index in range(sys_count):
-                # 遍历系统，并填充Ｙ坐标的数据.
-                for sys in query_count_by_sys_stat:
-                    if sys['sys_name'] == query_count_total[index]['sys_name'] and sys['itoms_status'] == q[
-                        'itoms_status']:
-                        # index代表的系统属于当前的状态，则＋１
-                        sys_list[index] += sys['count_grp']
+        series_data = []
+        for i in range(query_count_by_legend.count()):
+            series_data.append({
+                "name": query_count_by_legend[i]['emergency_reason'],
+                "value": query_count_by_legend[i]['count_grp'],
+            })
 
-            sery_dict = {
-                'name': q['itoms_status'],
-                'type': 'bar',
-                'stack': '总量',
-                'label': {
-                    'normal': {
-                        # 'show': 'true',
-                        'position': 'insideRight'
-                    }
-                },
-                'data': sys_list
+        sery_dict = {
+            'name': itoms_type,
+            'type': 'pie',
+            'radius': '55%',
+            'center': ['50%', '60%'],
+            'data': series_data,
+            'itemStyle': {
+                'emphasis': {
+                    'shadowBlur': 10,
+                    'shadowOffsetX': 0,
+                    'shadowColor': 'rgba(0, 0, 0, 0.5)'
+                }
             }
-            self.series.append(sery_dict)
-
+        }
+        self.series.append(sery_dict)
         return self.get_dict_data()
-
 
     def mk_itoms_chg_by_date(self, itoms_type, date):
         '''
@@ -142,11 +138,9 @@ class VerBarChart:
         query_count_by_sys_stat = query_set.values('sys_name', 'itoms_status') \
             .annotate(count_grp=Sum('count')).order_by('sys_name', 'itoms_status')
 
-
         # 根据当前数据集，生成对工单的统计数据; 单独按系统排名是为了得到从高到低的顺序
         query_count_total = query_set.values('sys_name') \
             .annotate(count_grp=Sum('count')).order_by('count_grp')
-
 
         # 根据系统总量排名，遍历数据集，生成展示数据．
         for q in query_count_total:
@@ -155,7 +149,7 @@ class VerBarChart:
         # 数据集确定后，状态维度的长度固定，系统类型维度的长度固定．即每一个系统都要有这几个状态，没有时补０．
         # 可以先按维度初始化，然后遍历系统，有则＋１计数．
         sys_count = query_count_total.count()
-        self.yAxis_count=sys_count
+        self.yAxis_count = sys_count
 
         for q in query_itoms_status:
             self.legend_data.append(q['itoms_status'])
@@ -185,7 +179,6 @@ class VerBarChart:
             self.series.append(sery_dict)
 
         return self.get_dict_data()
-
 
     def get_dict_data(self):
         result = {
