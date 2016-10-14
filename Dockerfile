@@ -3,7 +3,7 @@ FROM daocloud.io/peterz3g/ywreport:master-2214d03
 MAINTAINER peterz3g <peterz3g@163.com>
 
 
-RUN mkdir /code
+#RUN mkdir /code
 WORKDIR /code
 
 ADD requirements.txt /code/requirements.txt
