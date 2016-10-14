@@ -6,6 +6,7 @@ RUN mkdir /code
 WORKDIR /code
 
 ADD requirements.txt /code/requirements.txt
+RUN pip install Django==1.9.8
 RUN pip install -r /code/requirements.txt
 COPY . /code
 COPY docker-entrypoint.sh docker-entrypoint.sh
