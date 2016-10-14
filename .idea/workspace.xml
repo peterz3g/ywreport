@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f455713-9f46-4862-9a63-d263e43b131e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/mkChartData/PieChart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/batTasks/dbImport.py" afterPath="$PROJECT_DIR$/chart/batTasks/dbImport.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/batTasks/test.py" afterPath="$PROJECT_DIR$/chart/batTasks/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/mkChartData/HorBarChart.py" afterPath="$PROJECT_DIR$/chart/mkChartData/HorBarChart.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/mkChartData/PieChart.py" afterPath="$PROJECT_DIR$/chart/mkChartData/PieChart.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/mkChartData/VerBarChart.py" afterPath="$PROJECT_DIR$/chart/mkChartData/VerBarChart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/models.py" afterPath="$PROJECT_DIR$/chart/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/servers.py" afterPath="$PROJECT_DIR$/chart/servers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/static/js/chart_itoms.js" afterPath="$PROJECT_DIR$/chart/static/js/chart_itoms.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/templates/chart_itoms.html" afterPath="$PROJECT_DIR$/chart/templates/chart_itoms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-entrypoint.sh" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ywreport/settings.py" afterPath="$PROJECT_DIR$/ywreport/settings.py" />
     </list>
     <ignored path="ywreport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,7 +49,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="chart_itoms_chg" />
+        <option name="myItemId" value="chart_itoms_para_mod" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -75,118 +62,7 @@
     <favorites_list name="ywreport" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itoms_select.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file/itoms_select.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart_itoms.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/templates/chart_itoms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart_itoms.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chart/static/js/chart_itoms.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="900" column="16" selection-start-line="900" selection-start-column="16" selection-end-line="900" selection-end-column="16" />
-              <folding>
-                <element signature="n#!!block;n#load_line_chart#0" expanded="false" />
-                <element signature="n#!!block;n#load_ver_bar_chart#0" expanded="false" />
-                <element signature="n#!!block;n#load_geo_chart#0" expanded="false" />
-                <element signature="n#!!block;n#load_pie_chart_local#0" expanded="false" />
-                <element signature="e#28513#29290#0" expanded="false" />
-                <element signature="e#29309#30562#0" expanded="false" />
-                <element signature="e#32960#33867#0" expanded="false" />
-                <element signature="e#33894#35355#0" expanded="false" />
-                <element signature="e#35380#35606#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PieChart.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/mkChartData/PieChart.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="8" />
-              <folding>
-                <element signature="e#41#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="servers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/servers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
-              <folding>
-                <element signature="e#94#130#0" expanded="true" />
-                <element signature="e#1944#2343#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerBarChart.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/mkChartData/VerBarChart.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-749">
-              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart_itoms_chg" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8213eda6/0209c20d-e2b7-47a0-b939-1c46d70460e1/chart_itoms_chg">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineChart.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/mkChartData/LineChart.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,11 +78,12 @@
         <option value="$PROJECT_DIR$/chart/batTasks/test.py" />
         <option value="$PROJECT_DIR$/chart/batTasks/dbImport.py" />
         <option value="$PROJECT_DIR$/chart/templates/chart_itoms.html" />
-        <option value="$PROJECT_DIR$/chart/mkChartData/VerBarChart.py" />
-        <option value="$PROJECT_DIR$/chart/mkChartData/HorBarChart.py" />
         <option value="$PROJECT_DIR$/chart/mkChartData/PieChart.py" />
-        <option value="$PROJECT_DIR$/chart/servers.py" />
+        <option value="$PROJECT_DIR$/chart/mkChartData/HorBarChart.py" />
         <option value="$PROJECT_DIR$/chart/static/js/chart_itoms.js" />
+        <option value="$PROJECT_DIR$/chart/servers.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0209c20d-e2b7-47a0-b939-1c46d70460e1/console.sql" />
+        <option value="$PROJECT_DIR$/chart/mkChartData/VerBarChart.py" />
       </list>
     </option>
   </component>
@@ -581,18 +458,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17370518" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6388889" sideWeight="0.50278884" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18406375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27160493" sideWeight="0.49721116" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26234567" sideWeight="0.49721116" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17370518" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18406375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1250996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -611,13 +489,13 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27160493" sideWeight="0.49721116" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21604939" sideWeight="0.49721116" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17370518" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18406375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1250996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -643,6 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -694,6 +573,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -761,13 +641,6 @@
         <state relative-caret-position="63">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0209c20d-e2b7-47a0-b939-1c46d70460e1/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1000,35 +873,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8213eda6/0209c20d-e2b7-47a0-b939-1c46d70460e1/chart_itoms_para_mod">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chart/batTasks/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
             <element signature="e#14#29#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/batTasks/dbImport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="134" column="37" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
-          <folding>
-            <element signature="e#4212#6765#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1068,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/mkChartData/LineChart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/8213eda6/0209c20d-e2b7-47a0-b939-1c46d70460e1/chart_itoms_chg">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1089,75 +931,335 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/mkChartData/HorBarChart.py">
+    <entry file="file://$PROJECT_DIR$/chart/batTasks/dbImport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="174" column="23" selection-start-line="174" selection-start-column="23" selection-end-line="174" selection-end-column="23" />
+        <state relative-caret-position="156">
+          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding>
-            <element signature="e#1434#4146#0" expanded="false" />
+            <element signature="e#4212#6765#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/mkChartData/LineChart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file/itoms_select.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/templates/chart_itoms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/mkChartData/VerBarChart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-749">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        <state relative-caret-position="336">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/servers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+        <state relative-caret-position="254">
+          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
           <folding>
-            <element signature="e#94#130#0" expanded="true" />
-            <element signature="e#1944#2343#0" expanded="false" />
+            <element signature="e#15#92#1" expanded="false" />
+            <element signature="e#642#719#1" expanded="false" />
+            <element signature="e#753#777#0" expanded="false" />
+            <element signature="e#2798#3102#0" expanded="false" />
+            <element signature="e#3155#3373#0" expanded="false" />
+            <element signature="e#3774#4241#0" expanded="false" />
+            <element signature="e#4056#4093#0" expanded="false" />
+            <element signature="e#4158#4188#0" expanded="false" />
+            <element signature="e#4311#4561#0" expanded="false" />
+            <element signature="e#4628#4851#0" expanded="false" />
+            <element signature="e#4888#5039#0" expanded="false" />
+            <element signature="e#4888#4920#0" expanded="false" />
+            <element signature="e#5081#5422#0" expanded="false" />
+            <element signature="e#5225#5316#0" expanded="false" />
+            <element signature="e#5464#5820#0" expanded="false" />
+            <element signature="e#5533#5576#0" expanded="false" />
+            <element signature="e#5642#5722#0" expanded="false" />
+            <element signature="e#5858#6257#0" expanded="false" />
+            <element signature="e#6072#6109#0" expanded="false" />
+            <element signature="e#6174#6204#0" expanded="false" />
+            <element signature="e#6296#6510#0" expanded="false" />
+            <element signature="e#6538#6738#0" expanded="false" />
+            <element signature="e#6764#6806#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/mkChartData/PieChart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="8" />
+        <state relative-caret-position="63">
+          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
           <folding>
-            <element signature="e#41#56#0" expanded="true" />
+            <element signature="e#1345#3514#0" expanded="false" />
+            <element signature="e#3671#5532#0" expanded="false" />
+            <element signature="e#7621#9996#0" expanded="false" />
+            <element signature="e#10035#10288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8213eda6/0209c20d-e2b7-47a0-b939-1c46d70460e1/chart_itoms_para_mod">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0209c20d-e2b7-47a0-b939-1c46d70460e1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/templates/chart_itoms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/mkChartData/HorBarChart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+          <folding>
+            <element signature="e#1434#4146#0" expanded="false" />
+            <element signature="e#4207#6945#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/static/js/chart_itoms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="900" column="16" selection-start-line="900" selection-start-column="16" selection-end-line="900" selection-end-column="16" />
+        <state relative-caret-position="203">
+          <caret line="1085" column="28" selection-start-line="1085" selection-start-column="28" selection-end-line="1085" selection-end-column="28" />
           <folding>
-            <element signature="n#!!block;n#load_line_chart#0" expanded="false" />
+            <element signature="e#146#2454#0" expanded="false" />
+            <element signature="e#202#235#0" expanded="false" />
+            <element signature="e#253#342#0" expanded="false" />
+            <element signature="e#358#570#0" expanded="false" />
+            <element signature="e#504#530#0" expanded="false" />
+            <element signature="e#589#860#0" expanded="false" />
+            <element signature="e#707#820#0" expanded="false" />
+            <element signature="e#879#2093#0" expanded="false" />
+            <element signature="e#952#2083#0" expanded="false" />
+            <element signature="e#1023#1986#0" expanded="false" />
+            <element signature="e#1381#1968#0" expanded="false" />
+            <element signature="e#1407#1420#0" expanded="false" />
+            <element signature="e#1778#1803#0" expanded="false" />
+            <element signature="e#2111#2236#0" expanded="false" />
+            <element signature="e#2112#2235#0" expanded="false" />
+            <element signature="e#2166#2197#0" expanded="false" />
+            <element signature="e#2253#2390#0" expanded="false" />
+            <element signature="e#2267#2287#0" expanded="false" />
+            <element signature="e#2407#2447#0" expanded="false" />
+            <element signature="n#!!block;n#load_hor_bar_chart#0" expanded="false" />
+            <element signature="e#3177#5538#0" expanded="false" />
+            <element signature="e#3191#3225#0" expanded="false" />
+            <element signature="e#3640#3735#0" expanded="false" />
+            <element signature="e#3666#3721#0" expanded="false" />
+            <element signature="e#3667#3720#0" expanded="false" />
+            <element signature="e#3770#4284#0" expanded="false" />
+            <element signature="e#3795#3859#0" expanded="false" />
+            <element signature="e#3885#3950#0" expanded="false" />
+            <element signature="e#3975#4028#0" expanded="false" />
+            <element signature="e#4053#4231#0" expanded="false" />
+            <element signature="e#4396#5526#0" expanded="false" />
+            <element signature="e#4414#4448#0" expanded="false" />
+            <element signature="e#4823#4850#0" expanded="false" />
+            <element signature="e#5545#5579#0" expanded="false" />
+            <element signature="n#!!block;n#load_hor_chart#0" expanded="false" />
+            <element signature="e#6183#6206#0" expanded="false" />
+            <element signature="e#6451#6458#0" expanded="false" />
+            <element signature="e#6784#9743#0" expanded="false" />
+            <element signature="e#6809#6873#0" expanded="false" />
+            <element signature="e#6899#7033#0" expanded="false" />
+            <element signature="e#7057#7333#0" expanded="false" />
+            <element signature="e#7251#7277#0" expanded="false" />
+            <element signature="e#7360#7695#0" expanded="false" />
+            <element signature="e#7510#7639#0" expanded="false" />
+            <element signature="e#7722#9409#0" expanded="false" />
+            <element signature="e#7819#9391#0" expanded="false" />
+            <element signature="e#7906#9278#0" expanded="false" />
+            <element signature="e#8304#9252#0" expanded="false" />
+            <element signature="e#8338#8351#0" expanded="false" />
+            <element signature="e#9434#9487#0" expanded="false" />
+            <element signature="e#9512#9690#0" expanded="false" />
+            <element signature="e#9873#9907#0" expanded="false" />
+            <element signature="e#10282#10309#0" expanded="false" />
+            <element signature="e#10476#10651#0" expanded="false" />
             <element signature="n#!!block;n#load_ver_bar_chart#0" expanded="false" />
+            <element signature="e#11801#13868#0" expanded="false" />
+            <element signature="e#12222#12792#0" expanded="false" />
+            <element signature="e#12247#12367#0" expanded="false" />
+            <element signature="e#12393#12458#0" expanded="false" />
+            <element signature="e#12483#12536#0" expanded="false" />
+            <element signature="e#12561#12739#0" expanded="false" />
+            <element signature="e#12930#13005#0" expanded="false" />
+            <element signature="e#13064#13818#0" expanded="false" />
+            <element signature="e#13181#13796#0" expanded="false" />
+            <element signature="e#13203#13244#0" expanded="false" />
+            <element signature="e#13874#13908#0" expanded="false" />
+            <element signature="e#14791#14798#0" expanded="false" />
+            <element signature="e#14910#15017#0" expanded="false" />
+            <element signature="e#15043#15177#0" expanded="false" />
+            <element signature="e#15201#15477#0" expanded="false" />
+            <element signature="e#15395#15421#0" expanded="false" />
+            <element signature="e#15504#15839#0" expanded="false" />
+            <element signature="e#15654#15783#0" expanded="false" />
+            <element signature="e#16482#16495#0" expanded="false" />
+            <element signature="e#17939#17992#0" expanded="false" />
+            <element signature="e#18017#18195#0" expanded="false" />
+            <element signature="e#18386#18461#0" expanded="false" />
+            <element signature="e#18659#18700#0" expanded="false" />
             <element signature="n#!!block;n#load_geo_chart#0" expanded="false" />
+            <element signature="e#19969#20331#0" expanded="false" />
+            <element signature="e#20509#35648#0" expanded="false" />
+            <element signature="e#20523#20550#0" expanded="false" />
+            <element signature="e#20756#20763#0" expanded="false" />
+            <element signature="e#20958#30192#0" expanded="false" />
+            <element signature="e#21031#21330#0" expanded="false" />
+            <element signature="e#21357#22204#0" expanded="false" />
+            <element signature="e#21560#22185#0" expanded="false" />
+            <element signature="e#21586#21633#0" expanded="false" />
+            <element signature="e#21866#22163#0" expanded="false" />
+            <element signature="e#21896#21938#0" expanded="false" />
+            <element signature="e#22231#25536#0" expanded="false" />
+            <element signature="e#22328#25518#0" expanded="false" />
+            <element signature="e#22415#23506#0" expanded="false" />
+            <element signature="e#22813#23480#0" expanded="false" />
+            <element signature="e#22847#22860#0" expanded="false" />
+            <element signature="e#23266#23291#0" expanded="false" />
+            <element signature="e#23532#23549#0" expanded="false" />
+            <element signature="e#25387#25495#0" expanded="false" />
+            <element signature="e#25561#25680#0" expanded="false" />
+            <element signature="e#25709#26186#0" expanded="false" />
+            <element signature="e#25892#25902#0" expanded="false" />
+            <element signature="e#26209#26594#0" expanded="false" />
+            <element signature="e#26306#26531#0" expanded="false" />
+            <element signature="e#26340#26407#0" expanded="false" />
+            <element signature="e#26443#26509#0" expanded="false" />
+            <element signature="e#26620#30178#0" expanded="false" />
+            <element signature="e#26683#27506#0" expanded="false" />
+            <element signature="e#26958#27211#0" expanded="false" />
+            <element signature="e#26996#27071#0" expanded="false" />
+            <element signature="e#27111#27185#0" expanded="false" />
+            <element signature="e#27291#27295#0" expanded="false" />
+            <element signature="e#27528#28353#0" expanded="false" />
+            <element signature="e#27803#28056#0" expanded="false" />
+            <element signature="e#27841#27916#0" expanded="false" />
+            <element signature="e#27956#28030#0" expanded="false" />
+            <element signature="e#28138#28142#0" expanded="false" />
+            <element signature="e#28423#30159#0" expanded="false" />
+            <element signature="e#28583#28611#0" expanded="false" />
+            <element signature="e#28827#28902#0" expanded="false" />
+            <element signature="e#28981#29455#0" expanded="false" />
+            <element signature="e#29019#29194#0" expanded="false" />
+            <element signature="e#29224#29238#0" expanded="false" />
+            <element signature="e#29492#29740#0" expanded="false" />
+            <element signature="e#29530#29714#0" expanded="false" />
+            <element signature="e#29856#29888#0" expanded="false" />
+            <element signature="e#30062#30136#0" expanded="false" />
+            <element signature="e#30283#32486#0" expanded="false" />
+            <element signature="e#30326#30775#0" expanded="false" />
+            <element signature="e#30634#30679#0" expanded="false" />
+            <element signature="e#30822#31197#0" expanded="false" />
+            <element signature="e#31085#31101#0" expanded="false" />
+            <element signature="e#31246#32285#0" expanded="false" />
+            <element signature="e#31532#31965#0" expanded="false" />
+            <element signature="e#31641#31894#0" expanded="false" />
+            <element signature="e#31679#31754#0" expanded="false" />
+            <element signature="e#31794#31868#0" expanded="false" />
+            <element signature="e#31987#32012#0" expanded="false" />
+            <element signature="e#32302#32334#0" expanded="false" />
+            <element signature="e#32502#32529#0" expanded="false" />
+            <element signature="e#32680#32755#0" expanded="false" />
+            <element signature="e#32814#35390#0" expanded="false" />
+            <element signature="e#32970#35368#0" expanded="false" />
+            <element signature="e#33146#33973#0" expanded="false" />
+            <element signature="e#33172#33188#0" expanded="false" />
+            <element signature="e#33405#33475#0" expanded="false" />
+            <element signature="e#33552#33710#0" expanded="false" />
+            <element signature="e#33606#33684#0" expanded="false" />
+            <element signature="e#33735#33793#0" expanded="false" />
+            <element signature="e#33999#34390#0" expanded="false" />
+            <element signature="e#34130#34196#0" expanded="false" />
+            <element signature="e#34411#34438#0" expanded="false" />
+            <element signature="e#34663#34758#0" expanded="false" />
+            <element signature="e#34779#34808#0" expanded="false" />
+            <element signature="e#35143#35147#0" expanded="false" />
+            <element signature="e#35513#35599#0" expanded="false" />
             <element signature="n#!!block;n#load_pie_chart_local#0" expanded="false" />
-            <element signature="e#28513#29290#0" expanded="false" />
-            <element signature="e#29309#30562#0" expanded="false" />
-            <element signature="e#32960#33867#0" expanded="false" />
-            <element signature="e#33894#35355#0" expanded="false" />
-            <element signature="e#35380#35606#0" expanded="false" />
+            <element signature="e#35799#35821#0" expanded="false" />
+            <element signature="e#36059#36091#0" expanded="false" />
+            <element signature="e#36289#36296#0" expanded="false" />
+            <element signature="e#36623#36952#0" expanded="false" />
+            <element signature="e#36760#36882#0" expanded="false" />
+            <element signature="e#37008#40056#0" expanded="false" />
+            <element signature="e#37065#37166#0" expanded="false" />
+            <element signature="e#37185#37962#0" expanded="false" />
+            <element signature="e#37348#37951#0" expanded="false" />
+            <element signature="e#37366#37413#0" expanded="false" />
+            <element signature="e#37643#37937#0" expanded="false" />
+            <element signature="e#37665#37707#0" expanded="false" />
+            <element signature="e#37981#39234#0" expanded="false" />
+            <element signature="e#38054#39224#0" expanded="false" />
+            <element signature="e#38125#39088#0" expanded="false" />
+            <element signature="e#38483#39070#0" expanded="false" />
+            <element signature="e#38509#38522#0" expanded="false" />
+            <element signature="e#38880#38905#0" expanded="false" />
+            <element signature="e#39117#39209#0" expanded="false" />
+            <element signature="e#39251#39458#0" expanded="false" />
+            <element signature="e#39476#40050#0" expanded="false" />
+            <element signature="e#39490#40040#0" expanded="false" />
+            <element signature="e#39681#39745#0" expanded="false" />
+            <element signature="e#39813#40026#0" expanded="false" />
+            <element signature="e#39845#40008#0" expanded="false" />
+            <element signature="e#40170#40229#0" expanded="false" />
+            <element signature="e#40280#40590#0" expanded="false" />
+            <element signature="e#40412#40576#0" expanded="false" />
+            <element signature="e#40426#40440#0" expanded="false" />
+            <element signature="e#40669#40703#0" expanded="false" />
+            <element signature="e#41413#41449#0" expanded="false" />
+            <element signature="e#41584#41720#0" expanded="false" />
+            <element signature="e#41747#42654#0" expanded="false" />
+            <element signature="e#41950#42635#0" expanded="false" />
+            <element signature="e#41976#42023#0" expanded="false" />
+            <element signature="e#42286#42613#0" expanded="false" />
+            <element signature="e#42316#42358#0" expanded="false" />
+            <element signature="e#43297#43310#0" expanded="false" />
+            <element signature="e#44633#44741#0" expanded="false" />
+            <element signature="e#44807#44914#0" expanded="false" />
+            <element signature="e#45345#45391#0" expanded="false" />
+            <element signature="e#45624#45642#0" expanded="false" />
+            <element signature="n#!!block;n#toolbox_return_btn#0" expanded="false" />
+            <element signature="e#46863#46925#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/mkChartData/VerBarChart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#1304#3679#0" expanded="false" />
+            <element signature="e#3743#6118#0" expanded="false" />
+            <element signature="e#6220#8664#0" expanded="false" />
+            <element signature="e#8810#11183#0" expanded="false" />
           </folding>
         </state>
       </provider>

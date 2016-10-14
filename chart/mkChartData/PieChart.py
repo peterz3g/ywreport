@@ -50,7 +50,7 @@ class PieChart:
         self.selected_date = ''
 
     # 20161009-zhangyang32 create
-    def mk_itoms_chg_by_date_gby_reason(self, itoms_type, date):
+    def mk_itoms_chg_LemgcReasons_by_date(self, itoms_type, date):
         '''
         由于查询涉及到具体的工单字段，因此图类的方法需要按名称区分不同数据源的处理,而不是统一函数名称
         查询生成某类工单，某天的统计数据
@@ -93,6 +93,123 @@ class PieChart:
         for i in range(query_count_by_legend.count()):
             series_data.append({
                 "name": query_count_by_legend[i]['emergency_reason'],
+                "value": query_count_by_legend[i]['count_grp'],
+            })
+
+        sery_dict = {
+            'name': itoms_type,
+            'type': 'pie',
+            'radius': '55%',
+            'center': ['50%', '60%'],
+            'data': series_data,
+            'itemStyle': {
+                'emphasis': {
+                    'shadowBlur': 10,
+                    'shadowOffsetX': 0,
+                    'shadowColor': 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+        self.series.append(sery_dict)
+        return self.get_dict_data()
+
+    # 20161013 zhangyang32 created
+    # 命名规则：mk_表名_where_条件字段
+    def mk_itoms_chg_where_data_type_sys(self, itoms_type, date, sys_name, legend):
+        '''
+        由于查询涉及到具体的工单字段，因此图类的方法需要按名称区分不同数据源的处理,而不是统一函数名称接口
+        :param itoms_type: 由上一级传递进来的工单类型
+        :param date: 由上一级传递进来的查询日期
+        :param legend: 饼图分类依据
+        :return:返回python字典，由外部进行返回前端时的json转换
+        '''
+
+        self.selected_date = date  # 当前选中日期,格式同源数据库，字符串保存
+        self.title_text = u'%s按状态统计' % itoms_type
+
+        # 查询当前要处理的数据集合，不做加工
+        # query_set = itoms_chg.objects \
+        #     .filter(crt_date=self.selected_date, itoms_type=itoms_type) \
+        #     .exclude(sys_name='(null)')
+        query_set = itoms_chg.objects \
+            .filter(crt_date=self.selected_date, itoms_type=itoms_type, sys_name=sys_name)
+
+        # 根据当前数据集，找到所有工单修改原因,作为legend分类数据
+        query_itoms_legend = query_set.values(legend).distinct().order_by(legend)
+
+        # 根据当前数据集，生成group by统计数据
+        query_count_by_legend = query_set.values(legend) \
+            .annotate(count_grp=Sum('count')).order_by('count_grp')
+
+        # 数据集确定后，状态维度的长度固定，系统类型维度的长度固定．即每一个系统都要有这几个状态，没有时补０．
+        # 可以先按维度初始化，然后遍历系统，有则＋１计数．
+
+        for q in query_itoms_legend:
+            self.legend_data.append(q[legend])
+
+        series_data = []
+        for i in range(query_count_by_legend.count()):
+            series_data.append({
+                "name": query_count_by_legend[i][legend],
+                "value": query_count_by_legend[i]['count_grp'],
+            })
+
+        sery_dict = {
+            'name': itoms_type,
+            'type': 'pie',
+            'radius': '55%',
+            'center': ['50%', '60%'],
+            'data': series_data,
+            'itemStyle': {
+                'emphasis': {
+                    'shadowBlur': 10,
+                    'shadowOffsetX': 0,
+                    'shadowColor': 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+        self.series.append(sery_dict)
+        return self.get_dict_data()
+
+    # 20161014 zhangyang32 created
+    # 命名规则：mk_表名_where_条件字段
+    def mk_pie_itoms_para_mod_w_date_type_Lreason(self, itoms_type, date):
+        '''
+        由于查询涉及到具体的工单字段，因此图类的方法需要按名称区分不同数据源的处理,而不是统一函数名称接口
+        :param itoms_type: 由上一级传递进来的工单类型
+        :param date: 由上一级传递进来的查询日期
+        :param legend: 饼图分类依据
+        :return:返回python字典，由外部进行返回前端时的json转换
+        '''
+
+        self.selected_date = date  # 当前选中日期,格式同源数据库，字符串保存
+        self.title_text = u'%s按状态统计' % itoms_type
+        legend = 'mod_reason'
+
+        # 查询当前要处理的数据集合，不做加工
+        # query_set = itoms_chg.objects \
+        #     .filter(crt_date=self.selected_date, itoms_type=itoms_type) \
+        #     .exclude(sys_name='(null)')
+        query_set = itoms_para_mod.objects \
+            .filter(crt_date=self.selected_date, itoms_type=itoms_type)
+
+        # 根据当前数据集，找到所有工单修改原因,作为legend分类数据
+        query_itoms_legend = query_set.values(legend).distinct().order_by(legend)
+
+        # 根据当前数据集，生成group by统计数据
+        query_count_by_legend = query_set.values(legend) \
+            .annotate(count_grp=Sum('count')).order_by('count_grp')
+
+        # 数据集确定后，状态维度的长度固定，系统类型维度的长度固定．即每一个系统都要有这几个状态，没有时补０．
+        # 可以先按维度初始化，然后遍历系统，有则＋１计数．
+
+        for q in query_itoms_legend:
+            self.legend_data.append(q[legend])
+
+        series_data = []
+        for i in range(query_count_by_legend.count()):
+            series_data.append({
+                "name": query_count_by_legend[i][legend],
                 "value": query_count_by_legend[i]['count_grp'],
             })
 
