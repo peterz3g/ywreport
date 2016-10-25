@@ -156,22 +156,22 @@ function load_hor_chart(chart_div, chart_type, params) {
 
     timeTicket = setInterval(refresh_today, refresh_interval);
 
-    var isInput = true;
-    window.onblur = function () {
-        setTimeout(function () {
-            if (true) {
-                console.log("失去焦点！");
-
-                isInput = false;
-                clearInterval(timeTicket)
-            }
-        }, 500);
-    }
-    window.onfocus = function () {
-        if (!isInput) {
-            console.log("获得焦点！");
-            timeTicket = setInterval(refresh_today, refresh_interval);
-            isInput = true;
-        }
-    }
+    // var isInput = true;
+    // window.onblur = function () {
+    //     setTimeout(function () {
+    //         if (true) {
+    //             console.log("失去焦点！");
+    //
+    //             isInput = false;
+    //             clearInterval(timeTicket)
+    //         }
+    //     }, 500);
+    // }
+    // window.onfocus = function () {
+    //     if (!isInput) {
+    //         console.log("获得焦点！");
+    //         timeTicket = setInterval(refresh_today, refresh_interval);
+    //         isInput = true;
+    //     }
+    // }
 }
