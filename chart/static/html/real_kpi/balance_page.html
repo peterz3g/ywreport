@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<div class="bd" , id="balance_page">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="border: 1px solid black;">
+            <p>当前余额</p>
+            <p>88888888888.88</p>
+            <p>增减幅度</p>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" >
+                    <p>+200</p>
+                </div>
+                <div class="ui-block-b" >
+                    <p>+2.1%</p>
+                </div>
+            </div>
+        </div>
+        <div class="ui-block-b" style="border: 1px solid black;">
+            <p>今日最高</p>
+            <p>88888888888.88</p>
+            <p>今日最低</p>
+            <p>88888888888.88</p>
+        </div>
+    </div>
+    <div class="weui_tab">
+        <div class="weui_navbar">
+            <div id="balance_tab_today" class="weui_navbar_item weui_bar_item_on">
+                今日实时
+            </div>
+            <div id="balance_tab_day" class="weui_navbar_item">
+                按日统计
+            </div>
+            <div id="balance_tab_month" class="weui_navbar_item">
+                按月统计
+            </div>
+        </div>
+        <div class="weui_tab_bd">
+            <div class="chart_cells" id="balance_chart">
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/static/js/real_kpi/balance_page.js"></script>
+</body>
+</html>
+

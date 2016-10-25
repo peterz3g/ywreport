@@ -14,6 +14,7 @@ from chart.mkChartData.LineChart import LineChart
 from chart.mkChartData.PieChart import PieChart
 from chart.mkChartData.VerBarChart import VerBarChart
 from chart.mkChartData.HorBarChart import HorBarChart
+from chart.mkChartData.real_kpi.KpiBalanceData_test import KpiBalanceData
 from django.core.serializers import json
 
 from chart.models import itoms_count
@@ -41,6 +42,8 @@ def server_itoms(request):
         'geo': geo_chart_server,
         'pie': pie_chart_server,
         'pie_test': pie_test_server,
+        # none
+        'hor_balance_today': hor_balance_today_server,
         # itoms_type
         'hor_Xdate_Litype': hor_chart_server,
         # selected_date|itoms_type|emergency_reason
@@ -71,6 +74,19 @@ def hor_chart_server(request):
         result = chart.mk_table_w_type_g_date(itoms_para_mod, itoms_type[0])
     else:
         result = chart.mk_sysitoms_gby_date(itoms_type[0])
+    return JsonResponse(result)
+
+
+def hor_balance_today_server(request):
+    # print "hor_balance_today_server..."
+    params = request.GET['params']
+    values = params.split('|')
+    chart = KpiBalanceData()
+    if "test" in values[0]:
+        print "test:hor_balance_today_server..."
+        result = chart.mk_data_today_by_random(values[1])
+    else:
+        result = chart.mk_data_today_by_random(values[1])
     return JsonResponse(result)
 
 

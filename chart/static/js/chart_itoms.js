@@ -72,6 +72,7 @@ $(function () {
         },
     }
 
+    console.log("enter chart_itoms.js ");
     load_hor_chart('itoms_chg_emgc', "hor_Xdate_Litype", "紧急变更")
     load_hor_chart('itoms_para_mod', "hor_Xdate_Litype", "参数修改")
     load_hor_chart('itoms_chg', "hor_Xdate_Litype", "变更工单")
