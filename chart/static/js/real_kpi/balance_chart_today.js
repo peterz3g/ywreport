@@ -109,7 +109,10 @@ function load_hor_chart(chart_div, chart_type, params) {
             data: x_axis_label,
             axisLabel: {
                 interval: function (index, value) {
-                    if (index == 0 || index == 720 || index == 1439)
+                    var myDate = new Date();
+                    h = myDate.getHours();
+                    m = myDate.getMinutes();
+                    if (index == 0 || index == 720 || index == 1439 || index == h * 60 + m)
                         return true
                     else
                         return false
@@ -120,11 +123,12 @@ function load_hor_chart(chart_div, chart_type, params) {
     }, true);
     refresh_today()
     chart_ins.hideLoading();
-    
+
 
     //定时刷新
-    refresh_interval=30000
+    refresh_interval = 30000
     var x_count = 0
+
     function refresh_today() {
         // console.log("1222222")
         // console.log("aaaaaaaaaaaaaaaaaaaaa")
@@ -149,7 +153,7 @@ function load_hor_chart(chart_div, chart_type, params) {
             });
 
     }
-   
+
     timeTicket = setInterval(refresh_today, refresh_interval);
 
     var isInput = true;
@@ -157,7 +161,7 @@ function load_hor_chart(chart_div, chart_type, params) {
         setTimeout(function () {
             if (true) {
                 console.log("失去焦点！");
-                
+
                 isInput = false;
                 clearInterval(timeTicket)
             }

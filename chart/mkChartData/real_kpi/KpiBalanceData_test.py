@@ -55,7 +55,7 @@ class KpiBalanceData:
         '''
 
         now_h = int(datetime.datetime.now().strftime("%H"))
-        now_m = int(datetime.datetime.now().strftime("%H"))
+        now_m = int(datetime.datetime.now().strftime("%M"))
         print "%s:%s" % (now_h, now_m)
 
         start = now_h * 60 + now_m
