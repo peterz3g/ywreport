@@ -4,6 +4,8 @@ var CHART_VER_BAR_HEIGHT = 50;  //图表垂直柱状图高度
 $(function () {
     console.log("balance_chart_today...");
     load_hor_chart('balance_chart_today', "hor_Xdate_Litype", "紧急变更")
+
+
 });
 
 //20161024: updated by zhangyang32
@@ -13,7 +15,7 @@ function load_hor_chart(chart_div, chart_type, params) {
     //设置容器ＤＯＭ的高度,这里直接设置正常容器为４００
     var my_height = CHART_HEIGHT;
     chart_dom.style.height = my_height.toString() + "px";
-    
+
     var chart_ins = echarts.init(chart_dom, 'macarons');
     // var chart_ins = echarts.init(chart_dom,'dark');
     chart_ins.showLoading();
@@ -94,7 +96,7 @@ function load_hor_chart(chart_div, chart_type, params) {
             }
         },
         yAxis: {
-            max:500,
+            max: 500,
             type: 'value'
         },
         xAxis: {
@@ -120,15 +122,16 @@ function load_hor_chart(chart_div, chart_type, params) {
     chart_ins.hideLoading();
 
     //定时刷新
+
     var x_count = 0
-    timeTicket = setInterval(function () {
-        console.log("1222222")
-        console.log("aaaaaaaaaaaaaaaaaaaaa")
-        
+    function refresh_today() {
+        // console.log("1222222")
+        // console.log("aaaaaaaaaaaaaaaaaaaaa")
+
         if (x_count >= 1440)
             clearInterval(timeTicket)
         x_count += 1
-       
+
         $.getJSON("/server_itoms",
             {chart_type: "hor_balance_today", params: "test|" + x_count},
             function (result) {
@@ -144,6 +147,26 @@ function load_hor_chart(chart_div, chart_type, params) {
                 }, false);
             });
 
-    }, 6000);
+    }
+   
+    timeTicket = setInterval(refresh_today, 1000);
 
+    var isInput = true;
+    window.onblur = function () {
+        setTimeout(function () {
+            if (true) {
+                console.log("失去焦点！");
+                
+                isInput = false;
+                clearInterval(timeTicket)
+            }
+        }, 500);
+    }
+    window.onfocus = function () {
+        if (!isInput) {
+            console.log("获得焦点！");
+            timeTicket = setInterval(refresh_today, 1000);
+            isInput = true;
+        }
+    }
 }
