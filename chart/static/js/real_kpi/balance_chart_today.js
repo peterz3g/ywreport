@@ -122,7 +122,7 @@ function load_hor_chart(chart_div, chart_type, params) {
     chart_ins.hideLoading();
 
     //定时刷新
-
+    refresh_interval=30000
     var x_count = 0
     function refresh_today() {
         // console.log("1222222")
@@ -149,7 +149,7 @@ function load_hor_chart(chart_div, chart_type, params) {
 
     }
    
-    timeTicket = setInterval(refresh_today, 1000);
+    timeTicket = setInterval(refresh_today, refresh_interval);
 
     var isInput = true;
     window.onblur = function () {
@@ -165,7 +165,7 @@ function load_hor_chart(chart_div, chart_type, params) {
     window.onfocus = function () {
         if (!isInput) {
             console.log("获得焦点！");
-            timeTicket = setInterval(refresh_today, 1000);
+            timeTicket = setInterval(refresh_today, refresh_interval);
             isInput = true;
         }
     }

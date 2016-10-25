@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f455713-9f46-4862-9a63-d263e43b131e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" afterPath="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" />
     </list>
     <ignored path="ywreport.iws" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="balance_chart_today.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
+            <state relative-caret-position="294">
+              <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
               <folding>
                 <element signature="e#722#1031#0" expanded="false" />
                 <element signature="e#1089#3897#0" expanded="false" />
@@ -47,7 +47,7 @@
                 <element signature="e#1157#1243#0" expanded="false" />
                 <element signature="e#1259#1471#0" expanded="false" />
                 <element signature="e#1817#3280#0" expanded="false" />
-                <element signature="e#4311#4693#0" expanded="false" />
+                <element signature="e#4337#4719#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,8 +56,8 @@
       <file leaf-file-name="KpiBalanceData_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+            <state relative-caret-position="838">
+              <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
               <folding>
                 <element signature="e#15#40#1" expanded="false" />
                 <element signature="e#42#57#0" expanded="true" />
@@ -998,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+        <state relative-caret-position="838">
+          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
           <folding>
             <element signature="e#15#40#1" expanded="false" />
             <element signature="e#42#57#0" expanded="true" />
@@ -1011,8 +1011,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
+        <state relative-caret-position="294">
+          <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
           <folding>
             <element signature="e#722#1031#0" expanded="false" />
             <element signature="e#1089#3897#0" expanded="false" />
@@ -1020,7 +1020,7 @@
             <element signature="e#1157#1243#0" expanded="false" />
             <element signature="e#1259#1471#0" expanded="false" />
             <element signature="e#1817#3280#0" expanded="false" />
-            <element signature="e#4311#4693#0" expanded="false" />
+            <element signature="e#4337#4719#0" expanded="false" />
           </folding>
         </state>
       </provider>

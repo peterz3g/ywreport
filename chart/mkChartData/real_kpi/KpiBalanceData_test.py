@@ -54,7 +54,11 @@ class KpiBalanceData:
         :return:返回python字典，由外部进行返回前端时的json转换
         '''
 
-        start = int(start)
+        now_h = int(datetime.datetime.now().strftime("%H"))
+        now_m = int(datetime.datetime.now().strftime("%H"))
+        print "%s:%s" % (now_h, now_m)
+
+        start = now_h * 60 + now_m
 
         # self.selected_date = date  # 当前选中日期,格式同源数据库，字符串保存
         # self.title_text = '%s按系统排名' % itoms_type
@@ -74,8 +78,10 @@ class KpiBalanceData:
         # series_data_by_legend.append({'name': '23:30', 'value': 0})
 
         # 读取现有数据
-        for i in range(start):
-            series_data_by_legend.append(250 * math.sin(0.01*i))
+        for i in range(start-1):
+            series_data_by_legend.append(250 * math.sin(0.01 * i))
+
+        series_data_by_legend.append(250 * math.sin(0.01 * i))
 
         nowlen = len(series_data_by_legend)
         for i in range(1440 - nowlen):
