@@ -56,8 +56,8 @@ function load_hor_chart(chart_div, chart_type, params) {
         },
         tooltip: {
             trigger: 'axis',
-            triggerOn: 'click',
-            // triggerOn: 'mousemove',
+            // triggerOn: 'click',
+            triggerOn: 'mousemove',
             hideDelay: '100',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
                 type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
@@ -144,7 +144,6 @@ function load_hor_chart(chart_div, chart_type, params) {
                 }, false);
             });
 
-    }, 10);
-
+    }, 6000);
 
 }

@@ -75,7 +75,7 @@ class KpiBalanceData:
 
         # 读取现有数据
         for i in range(start):
-            series_data_by_legend.append(250 * math.sin(0.1*i))
+            series_data_by_legend.append(250 * math.sin(0.01*i))
 
         nowlen = len(series_data_by_legend)
         for i in range(1440 - nowlen):

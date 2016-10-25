@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f455713-9f46-4862-9a63-d263e43b131e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/mkChartData/real_kpi/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/html/real_kpi/balance_chart_day.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/html/real_kpi/balance_chart_month.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/html/real_kpi/balance_chart_today.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/html/real_kpi/balance_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/html/real_kpi/kpi_balance_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_day.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_month.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/servers.py" afterPath="$PROJECT_DIR$/chart/servers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/static/js/chart_itoms.js" afterPath="$PROJECT_DIR$/chart/static/js/chart_itoms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/static/js/chart_main.js" afterPath="$PROJECT_DIR$/chart/static/js/chart_main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/templates/chart_main.html" afterPath="$PROJECT_DIR$/chart/templates/chart_main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/templates/example.html" afterPath="$PROJECT_DIR$/chart/templates/example.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" afterPath="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" afterPath="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" />
     </list>
     <ignored path="ywreport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +34,38 @@
     <favorites_list name="ywreport" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="balance_chart_today.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding>
+                <element signature="e#1108#1141#0" expanded="false" />
+                <element signature="e#1159#1245#0" expanded="false" />
+                <element signature="e#1261#1473#0" expanded="false" />
+                <element signature="e#1819#3282#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KpiBalanceData_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+              <folding>
+                <element signature="e#15#40#1" expanded="false" />
+                <element signature="e#42#57#0" expanded="true" />
+                <element signature="e#366#509#1" expanded="false" />
+                <element signature="e#611#799#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,8 +104,8 @@
         <option value="$PROJECT_DIR$/chart/static/html/real_kpi/kpi_balance_page.html" />
         <option value="$PROJECT_DIR$/chart/static/js/chart_main.js" />
         <option value="$PROJECT_DIR$/chart/servers.py" />
-        <option value="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" />
         <option value="$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py" />
+        <option value="$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js" />
       </list>
     </option>
   </component>
@@ -264,6 +279,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="real_kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ywreport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ywreport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mkChartData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ywreport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ywreport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mkChartData" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -586,9 +641,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14820717" sideWeight="0.49382716" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20956175" sideWeight="0.49382716" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6388889" sideWeight="0.50278884" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18406375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -920,20 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
-          <folding>
-            <element signature="e#1108#1141#0" expanded="false" />
-            <element signature="e#1159#1245#0" expanded="false" />
-            <element signature="e#1261#1473#0" expanded="false" />
-            <element signature="e#1492#1800#0" expanded="false" />
-            <element signature="e#1819#3282#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chart/static/html/real_kpi/balance_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-483">
@@ -954,13 +995,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/mkChartData/real_kpi/KpiBalanceData_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="145">
+          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
           <folding>
             <element signature="e#15#40#1" expanded="false" />
             <element signature="e#42#57#0" expanded="true" />
             <element signature="e#366#509#1" expanded="false" />
             <element signature="e#611#799#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/js/real_kpi/balance_chart_today.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding>
+            <element signature="e#1108#1141#0" expanded="false" />
+            <element signature="e#1159#1245#0" expanded="false" />
+            <element signature="e#1261#1473#0" expanded="false" />
+            <element signature="e#1819#3282#0" expanded="false" />
           </folding>
         </state>
       </provider>
