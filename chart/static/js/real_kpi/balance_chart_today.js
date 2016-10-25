@@ -154,7 +154,7 @@ function load_hor_chart(chart_div, chart_type, params) {
 
     }
 
-    timeTicket = setInterval(refresh_today, refresh_interval);
+    // timeTicket = setInterval(refresh_today, refresh_interval);
 
     // var isInput = true;
     // window.onblur = function () {

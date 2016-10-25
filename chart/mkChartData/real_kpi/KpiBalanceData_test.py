@@ -104,6 +104,58 @@ class KpiBalanceData:
 
         return self.get_dict_data()
 
+
+    def mk_data_day_by_random(self, ndays=0):
+        '''
+        --date 作为x轴.
+        :return:返回python字典，由外部进行返回前端时的json转换
+        '''
+
+        now_h = int(datetime.datetime.now().strftime("%H"))
+        now_m = int(datetime.datetime.now().strftime("%M"))
+        print "%s:%s" % (now_h, now_m)
+
+        start = now_h * 60 + now_m
+
+        # self.selected_date = date  # 当前选中日期,格式同源数据库，字符串保存
+        # self.title_text = '%s按系统排名' % itoms_type
+        self.title_text = u'按日历史'
+        # 设置横坐标的值,已在前端实现,不再传递
+        # for i in range(24):
+        #     hour = "%d" % i
+        #     for j in range(60):
+        #         min = "%d" % j
+        #         time = "%s:%s" % (hour, min)
+        #         self.xAxis_data.append(time)
+
+        series_data_by_legend = []
+        # series_data_by_legend.append({'name': '00:00', 'value': 100})
+        # series_data_by_legend.append({'name': '00:30', 'value': 200})
+        # series_data_by_legend.append({'name': '12:30', 'value': 500})
+        # series_data_by_legend.append({'name': '23:30', 'value': 0})
+
+        # 读取现有数据
+        ndays=int(ndays)
+        for i in range(ndays):
+            series_data_by_legend.append(250 * math.sin(0.01 * i))
+
+        sery_dict = {
+            'name': 'balance',
+            # 'type': 'bar',
+            'type': 'line',
+            # 'stack': '总量',
+            'label': {
+                'normal': {
+                    # 'show': 'true',
+                    'position': 'insideRight'
+                }
+            },
+            'data': series_data_by_legend
+        }
+        self.series.append(sery_dict)
+
+        return self.get_dict_data()
+
     def get_dict_data(self):
         result = {
             'title_text': self.title_text,

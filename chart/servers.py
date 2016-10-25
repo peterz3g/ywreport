@@ -44,6 +44,8 @@ def server_itoms(request):
         'pie_test': pie_test_server,
         # none
         'hor_balance_today': hor_balance_today_server,
+        # none
+        'hor_balance_day': hor_balance_day_server,
         # itoms_type
         'hor_Xdate_Litype': hor_chart_server,
         # selected_date|itoms_type|emergency_reason
@@ -89,6 +91,17 @@ def hor_balance_today_server(request):
         result = chart.mk_data_today_by_random(values[1])
     return JsonResponse(result)
 
+def hor_balance_day_server(request):
+    # print "hor_balance_today_server..."
+    params = request.GET['params']
+    values = params.split('|')
+    chart = KpiBalanceData()
+    if "test" in values[0]:
+        print "test:hor_balance_day_server..."
+        result = chart.mk_data_day_by_random(values[1])
+    else:
+        result = chart.mk_data_day_by_random(values[1])
+    return JsonResponse(result)
 
 def ver_chart_server(request):
     chart_type = request.GET['chart_type']
