@@ -118,8 +118,9 @@ function load_hor_chart(chart_div, chart_type, params) {
         },
         series: []
     }, true);
-
+    refresh_today()
     chart_ins.hideLoading();
+    
 
     //定时刷新
     refresh_interval=30000
