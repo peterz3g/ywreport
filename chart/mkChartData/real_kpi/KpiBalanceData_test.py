@@ -78,10 +78,10 @@ class KpiBalanceData:
         # series_data_by_legend.append({'name': '23:30', 'value': 0})
 
         # 读取现有数据
-        for i in range(start-1):
+        for i in range(start - 1):
             series_data_by_legend.append(250 * math.sin(0.01 * i))
 
-        series_data_by_legend.append(250 * math.sin(0.01 * i))
+        series_data_by_legend.append(150 + random.randint(-100, 100))
 
         nowlen = len(series_data_by_legend)
         for i in range(1440 - nowlen):
@@ -103,7 +103,6 @@ class KpiBalanceData:
         self.series.append(sery_dict)
 
         return self.get_dict_data()
-
 
     def mk_data_day_by_random(self, ndays=0):
         '''
@@ -135,7 +134,7 @@ class KpiBalanceData:
         # series_data_by_legend.append({'name': '23:30', 'value': 0})
 
         # 读取现有数据
-        ndays=int(ndays)
+        ndays = int(ndays)
         for i in range(ndays):
             series_data_by_legend.append(250 * math.sin(0.01 * i))
 

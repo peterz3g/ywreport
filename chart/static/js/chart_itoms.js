@@ -86,7 +86,7 @@ function load_hor_bar_chart(chart_div, com_option, chart_type, itoms_type) {
     // var chart_ins = echarts.init(chart_dom,'dark');
     chart_ins.showLoading();
     // console.log('4', new Date());
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, itoms_type: itoms_type},
         function (result) {
             // console.log("iiiiiiiiiiiiiid");
@@ -164,7 +164,7 @@ function load_hor_chart(chart_div, chart_type, params) {
     // var chart_ins = echarts.init(chart_dom,'dark');
     chart_ins.showLoading();
     // console.log('4', new Date());
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, params: params},
         function (result) {
             // console.log(result);
@@ -292,7 +292,7 @@ function load_ver_bar_chart(chart_div, com_option, chart_type, itoms_type, itoms
     var chart_ins = echarts.init(chart_dom, 'macarons');
     chart_ins.showLoading();
     // console.log('4', new Date());
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, itoms_type: itoms_type, itoms_date: itoms_date},
         function (result) {
             //根据返回的ｙ轴维度数量，设置容器ＤＯＭ的高度
@@ -358,7 +358,7 @@ function load_ver_chart(chart_div, chart_type, params) {
     // var chart_ins = echarts.init(chart_dom,'dark');
     var chart_ins = echarts.init(chart_dom, 'macarons');
     chart_ins.showLoading();
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, params: params},
         function (result) {
             //根据返回的ｙ轴维度数量，设置容器ＤＯＭ的高度
@@ -493,7 +493,7 @@ function load_geo_chart(chart_div, com_option, chart_type, itoms_type, itoms_dat
         '香港', '澳门'
     ];
     // console.log('4', new Date());
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, itoms_type: itoms_type, itoms_date: itoms_date},
         function (result) {
             //设置容器ＤＯＭ的高度,这里直接设置正常容器为４００
@@ -985,7 +985,7 @@ function load_pie_chart(chart_div, chart_type, params) {
     chart_ins.resize();
 
     // 填入数据,当前是itoms的前端，对应访问itoms的后端数据服务,这里时按业务逻辑来划分模块
-    $.getJSON("/server_itoms",
+    $.getJSON("/ec/server_itoms",
         {chart_type: chart_type, params: params},
         function (result) {
             // console.log('==in=============');

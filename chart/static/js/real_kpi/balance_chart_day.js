@@ -141,7 +141,7 @@ function load_hor_chart(chart_div, chart_type, params) {
             clearInterval(timeTicket)
         x_count += 1
 
-        $.getJSON("/server_itoms",
+        $.getJSON("/ec/server_itoms",
             {chart_type: "hor_balance_day", params: "test|" + ndays},
             function (result) {
                 // console.log(chart_dom.style.height);

@@ -14,7 +14,7 @@ $(function () {
 
     $("#tabbar_itoms").on("tap", function () {
         // console.log('tabbar_itoms tap');
-        $("#page_content_load").load("/chart_itoms.html", function (responseTxt, statusTxt, xhr) {
+        $("#page_content_load").load("/static/html/itoms/chart_itoms.html", function (responseTxt, statusTxt, xhr) {
             if (statusTxt == "success") {
                 // console.log("External content loaded successfully!");
             }

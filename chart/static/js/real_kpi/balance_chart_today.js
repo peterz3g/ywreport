@@ -126,7 +126,7 @@ function load_hor_chart(chart_div, chart_type, params) {
 
 
     //定时刷新
-    refresh_interval = 30000
+    refresh_interval = 2000
     var x_count = 0
 
     function refresh_today() {
@@ -137,7 +137,7 @@ function load_hor_chart(chart_div, chart_type, params) {
             clearInterval(timeTicket)
         x_count += 1
 
-        $.getJSON("/server_itoms",
+        $.getJSON("/ec/server_itoms",
             {chart_type: "hor_balance_today", params: "test|" + x_count},
             function (result) {
                 // console.log(chart_dom.style.height);
@@ -154,7 +154,7 @@ function load_hor_chart(chart_div, chart_type, params) {
 
     }
 
-    // timeTicket = setInterval(refresh_today, refresh_interval);
+    timeTicket = setInterval(refresh_today, refresh_interval);
 
     // var isInput = true;
     // window.onblur = function () {

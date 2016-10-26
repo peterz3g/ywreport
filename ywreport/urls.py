@@ -20,11 +20,11 @@ urlpatterns = [
     # http views here
     url(r'^$', 'chart.views.chart_main', name='chart_main'),  # new
     url(r'^ec/$', 'chart.views.chart_main', name='chart_main'),  # new
-    url(r'^chart_itoms.html/$', 'chart.views.chart_itoms', name='chart_itoms'),  # new
-    url(r'^chart_patrol.html/$', 'chart.views.chart_patrol', name='chart_patrol'),  # new
-
+    # url(r'^chart_itoms.html/$', 'chart.views.chart_itoms', name='chart_itoms'),  # new
+    # url(r'^chart_patrol.html/$', 'chart.views.chart_patrol', name='chart_patrol'),  # new
     # http servers here like ajax
-    url(r'^server_itoms/$', 'chart.servers.server_itoms', name='server_itoms'),  # new
+
+    url(r'^ec/server_itoms/$', 'chart.servers.server_itoms', name='server_itoms'),  # new
 
 
 
