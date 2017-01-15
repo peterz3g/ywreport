@@ -36,7 +36,7 @@ class KpiBalanceData:
     如：series_data; series_data_label_normal_show 等．
 
     """
-    PERIOD_DAYS = 30  # 展示两周１４天的数据
+    PERIOD_DAYS = 1000  # 展示两周１４天的数据
 
     def __init__(self):
         self.title_text = ''
