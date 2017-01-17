@@ -24,7 +24,7 @@ $(function () {
     });
 
     $("#tabbar_patrol").on("tap", function () {
-        $("#page_content_load").load("/static/html/real_kpi/balance_page.html", function (responseTxt, statusTxt, xhr) {
+        $("#page_content_load").load("/static/html/real_kpi/chart_itoms.html", function (responseTxt, statusTxt, xhr) {
             if (statusTxt == "success") {
                 // console.log("External content loaded successfully!");
             }
@@ -44,7 +44,7 @@ $(function () {
     });
     
     // $("#tabbar_patrol").trigger("tap");
-    $("#tabbar_patrol").trigger("tap");
+    $("#tabbar_itoms").trigger("tap");
 });
 
 
